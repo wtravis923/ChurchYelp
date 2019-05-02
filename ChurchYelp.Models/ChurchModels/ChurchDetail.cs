@@ -14,14 +14,14 @@ namespace ChurchYelp.Models
 
         public string ChurchLocation { get; set; }
 
-        public string CommunityInvolvement { get; set; }
+        public float CommunityInvolvement { get; set; }
 
-        public string Friendliness { get; set; }
+        public float Friendliness { get; set; }
 
-        public string Facilities { get; set; }
+        public float Facilities { get; set; }
 
-        public string Music { get; set; }
+        public float Music { get; set; }
 
-        public string Message { get; set; }
+        public float Message { get; set; }
     }
 }
