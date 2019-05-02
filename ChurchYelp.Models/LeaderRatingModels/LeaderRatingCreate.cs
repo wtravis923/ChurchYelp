@@ -26,6 +26,6 @@ namespace ChurchYelp.Models.LeaderRatingModels
 
         public virtual Leader Leaders { get; set; }
     
-        public virtual Leader Leadership { get; set; }
+      
     }
 }
