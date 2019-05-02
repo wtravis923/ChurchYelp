@@ -1,6 +1,5 @@
 ﻿using ChurchYelp.Data;
 using ChurchYelp.Models;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,6 +52,52 @@ namespace ChurchYelp.Services
                 return query.ToArray();
                 }
             }
+       public ChurchDetail GetParkByID(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Churches.FirstOrDefault(p => p.ChurchID == id);
+
+                var model = new ChurchDetail
+                {
+                    ChurchID = entity.ChurchID,
+                    ChurchName = entity.ChurchName,
+                    ChurchLocation = entity.ChurchLocation,
+                    CommunityInvolvement = entity.CommunityInvolvement,
+                    Friendliness = entity.Friendliness,
+                    Facilities = entity.Facilities,
+                    Music = entity.Music,
+                    Message = entity.Message
+                };
+                return model;
+            }
+        }
+        public bool EditChurch(ChurchEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Churches.FirstOrDefault(p => p.ChurchID == model.ChurchID);
+
+                entity.ChurchName = model.ChurchName;
+                entity.ChurchLocation = model.ChurchLocation;
+                entity.CommunityInvolvement = model.CommunityInvolvement;
+                entity.Friendliness = model.Friendliness;
+                entity.Music = model.Music;
+                entity.Message = model.Message;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteChurch(int id)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Churches.Single(p => p.ChurchID == id);
+
+                ctx.Churches.Remove(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
         }
     }
 
