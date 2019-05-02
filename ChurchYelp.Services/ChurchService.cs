@@ -1,5 +1,6 @@
 ﻿using ChurchYelp.Data;
 using ChurchYelp.Models;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ChurchYelp.Services
 {
-    public class ChurchService
+  public class ChurchService
     {
         public bool CreateChurch(ChurchCreate model)
         {
@@ -29,10 +30,10 @@ namespace ChurchYelp.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<ChurchListItem> GetChurch()
-        {
-            using (var ctx = new ApplicationDbContext())
+            public IEnumerable<ChurchListItem> GetChurch()
             {
+                using (var ctx = new ApplicationDbContext())
+                {
                 var query =
                     ctx
                     .Churches
@@ -50,8 +51,8 @@ namespace ChurchYelp.Services
 
                     });
                 return query.ToArray();
+                }
             }
         }
     }
-}
 
