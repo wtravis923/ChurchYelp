@@ -11,15 +11,15 @@ namespace ChurchYelp.Models.ChurchRatingModels
     {
         public int ChurchID { get; set; }
 
-        public int CommunityInvolvementRating { get; set; }
+        public float CommunityInvolvementRating { get; set; }
 
-        public int FriendlyRating { get; set; }
+        public float FriendlyRating { get; set; }
 
-        public int FacilityRating { get; set; }
+        public float FacilityRating { get; set; }
 
-        public int MusicRating { get; set; }
+        public float MusicRating { get; set; }
 
-        public int MessageRating { get; set; }
+        public float MessageRating { get; set; }
 
         public virtual Church Church { get; set; }
     }
