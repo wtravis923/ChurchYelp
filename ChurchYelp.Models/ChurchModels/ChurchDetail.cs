@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChurchYelp.Data
+namespace ChurchYelp.Models
 {
-    public class Church
+ public   class ChurchDetail
     {
         public int ChurchID { get; set; }
-
-        public Guid UserID { get; set; }
 
         public string ChurchName { get; set; }
 
@@ -25,6 +23,5 @@ namespace ChurchYelp.Data
         public string Music { get; set; }
 
         public string Message { get; set; }
-
     }
 }
