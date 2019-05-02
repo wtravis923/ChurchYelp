@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ChurchModels\ChurchCreate.cs" />
+    <Compile Include="ChurchModels\ChurchDetail.cs" />
+    <Compile Include="ChurchModels\ChurchEdit.cs" />
+    <Compile Include="ChurchModels\ChurchListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
