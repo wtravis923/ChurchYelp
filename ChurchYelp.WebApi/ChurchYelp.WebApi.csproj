@@ -311,10 +311,6 @@
       <Project>{a19e1534-f8b8-45ad-a4db-92330648872e}</Project>
       <Name>ChurchYelp.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ChurchYelp.Models\ChurchYelp.Models.csproj">
-      <Project>{0bf6dbd5-c139-4dc7-93f7-94b3c195d620}</Project>
-      <Name>ChurchYelp.Models</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ChurchYelp.Services\ChurchYelp.Services.csproj">
       <Project>{a048b1bc-abb0-44d2-b148-29dec89f78fd}</Project>
       <Name>ChurchYelp.Services</Name>
