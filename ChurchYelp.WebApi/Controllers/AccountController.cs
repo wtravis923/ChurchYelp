@@ -16,6 +16,7 @@ using Microsoft.Owin.Security.OAuth;
 using ChurchYelp.WebApi.Models;
 using ChurchYelp.WebApi.Providers;
 using ChurchYelp.WebApi.Results;
+using ChurchYelp.Data;
 
 namespace ChurchYelp.WebApi.Controllers
 {

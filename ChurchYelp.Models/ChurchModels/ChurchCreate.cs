@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChurchYelp.Models
 {
-  public  class ChurchCreate
+    public class ChurchCreate
     {
         public int ChurchID { get; set; }
 
