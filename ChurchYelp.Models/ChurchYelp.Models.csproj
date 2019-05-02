@@ -45,6 +45,11 @@
     <Compile Include="ChurchModels\ChurchDetail.cs" />
     <Compile Include="ChurchModels\ChurchEdit.cs" />
     <Compile Include="ChurchModels\ChurchListItem.cs" />
+
+    <Compile Include="ChurchRatingModels\ChurchRatingCreate.cs" />
+    <Compile Include="ChurchRatingModels\ChurchRatingDetail.cs" />
+    <Compile Include="ChurchRatingModels\ChurchRatingEdit.cs" />
+    <Compile Include="ChurchRatingModels\ChurchRatingListItem.cs" />
     <Compile Include="LeaderModels\LeaderCreate.cs" />
     <Compile Include="LeaderModels\LeaderDetail.cs" />
     <Compile Include="LeaderModels\LeaderEdit.cs" />
