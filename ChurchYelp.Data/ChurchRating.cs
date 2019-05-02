@@ -11,6 +11,8 @@ namespace ChurchYelp.Data
     {
         [Key]
         public int ChurchID { get; set; }
+        public Guid UserID { get; set; }
+        public int ChurchRatingID { get; set; }
 
         public int ChurchRatingID { get; set; }
 
