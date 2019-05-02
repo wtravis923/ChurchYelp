@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChurchService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +59,10 @@
     <ProjectReference Include="..\ChurchYelp.Data\ChurchYelp.Data.csproj">
       <Project>{a19e1534-f8b8-45ad-a4db-92330648872e}</Project>
       <Name>ChurchYelp.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChurchYelp.Models\ChurchYelp.Models.csproj">
+      <Project>{0BF6DBD5-C139-4DC7-93F7-94B3C195D620}</Project>
+      <Name>ChurchYelp.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

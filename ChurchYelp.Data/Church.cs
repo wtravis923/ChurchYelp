@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace ChurchYelp.Data
 {
     public class Church
     {
+        [Key]
         public int ChurchID { get; set; }
 
         public Guid UserID { get; set; }
