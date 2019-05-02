@@ -44,8 +44,8 @@
     <Compile Include="Church.cs" />
     <Compile Include="ChurchRating.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Leadership.cs" />
-    <Compile Include="LeadershipRating.cs" />
+    <Compile Include="Leader.cs" />
+    <Compile Include="LeaderRating.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
