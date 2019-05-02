@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using ChurchYelp.Data;
 
-namespace ChurchYelp.Data
+namespace ChurchYelp.Models.LeaderRatingModels
 {
-  public class LeadershipRating
+    class LeaderRatingCreate
     {
-        [Key]
         public int LeaderID { get; set; }
 
         public float SpeakingAbilityRating { get; set; }
@@ -21,6 +21,5 @@ namespace ChurchYelp.Data
         public float RapportRating { get; set; }
 
         public virtual Leadership Leadership { get; set; }
-
     }
 }
