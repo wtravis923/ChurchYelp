@@ -39,6 +39,8 @@ namespace ChurchYelp.Data
 
         public DbSet<Leader> Leaders { get; set; }
 
+        public DbSet<LeaderRating> LeaderRatings { get; set; }
+
         public DbSet<LeaderRating> LeadershipRatings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

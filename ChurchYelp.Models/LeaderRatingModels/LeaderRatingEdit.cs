@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace ChurchYelp.Models.LeaderRatingModels
 {
-    class LeaderRatingEdit
+  public  class LeaderRatingEdit
     {
         
         public int LeaderID { get; set; }
+
+        public int LeaderRatingID { get; set; }
         public float SpeakingAbilityRating { get; set; }
 
-        public float EngaginRating { get; set; }
+        public float EngagingRating { get; set; }
 
         public float AuthenticRating { get; set; }
 
