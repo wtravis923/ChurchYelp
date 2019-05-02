@@ -9,6 +9,7 @@ namespace ChurchYelp.Models.LeaderRatingModels
 {
     class LeaderRatingEdit
     {
+        
         public int LeaderID { get; set; }
         public int SpeakingAbilityRating { get; set; }
 
