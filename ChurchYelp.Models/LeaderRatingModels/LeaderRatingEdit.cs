@@ -11,13 +11,13 @@ namespace ChurchYelp.Models.LeaderRatingModels
     {
         
         public int LeaderID { get; set; }
-        public int SpeakingAbilityRating { get; set; }
+        public float SpeakingAbilityRating { get; set; }
 
-        public int EngaginRating { get; set; }
+        public float EngaginRating { get; set; }
 
-        public int AuthenticRating { get; set; }
+        public float AuthenticRating { get; set; }
 
-        public int RapportRating { get; set; }
+        public float RapportRating { get; set; }
 
         public virtual Leadership Leadership { get; set; }
     }

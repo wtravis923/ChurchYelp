@@ -14,12 +14,12 @@ namespace ChurchYelp.Models.LeaderModels
 
         public Guid UserID { get; set; }
 
-        public string SpeakingAbility { get; set; }
+        public float SpeakingAbility { get; set; }
 
-        public string Engaging { get; set; }
+        public float Engaging { get; set; }
 
-        public string Authentic { get; set; }
+        public float Authentic { get; set; }
 
-        public string Rapport { get; set; }
+        public float Rapport { get; set; }
     }
 }
