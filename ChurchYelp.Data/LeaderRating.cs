@@ -21,11 +21,16 @@ namespace ChurchYelp.Data
 
         public float EngagingRating { get; set; }
 
+        public float SpeakingAbilityRating { get; set; }
+
+        public float EngaginRating { get; set; }
+
         public float AuthenticRating { get; set; }
 
         public float RapportRating { get; set; }
 
         public virtual Leader Leaders{ get; set; }
-
+    
+        public virtual Leader Leadership { get; set; }
     }
 }

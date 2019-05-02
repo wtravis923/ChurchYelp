@@ -25,5 +25,7 @@ namespace ChurchYelp.Models.LeaderRatingModels
         public float RapportRating { get; set; }
 
         public virtual Leader Leaders { get; set; }
+    
+        public virtual Leader Leadership { get; set; }
     }
 }
