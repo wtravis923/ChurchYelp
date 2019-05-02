@@ -12,6 +12,7 @@ namespace ChurchYelp.Models.ChurchRatingModels
         public int ChurchID { get; set; }
 
         public float CommunityInvolvementRating { get; set; }
+        public int ChurchRatingID { get; set; }
 
         public float FriendlyRating { get; set; }
 
