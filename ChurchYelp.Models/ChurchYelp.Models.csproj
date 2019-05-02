@@ -45,6 +45,10 @@
     <Compile Include="ChurchModels\ChurchDetail.cs" />
     <Compile Include="ChurchModels\ChurchEdit.cs" />
     <Compile Include="ChurchModels\ChurchListItem.cs" />
+    <Compile Include="ChurchRatingModels\ChurchRatingCreate.cs" />
+    <Compile Include="ChurchRatingModels\ChurchRatingDetail.cs" />
+    <Compile Include="ChurchRatingModels\ChurchRatingEdit.cs" />
+    <Compile Include="ChurchRatingModels\ChurchRatingListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +61,16 @@
     <PackageReference Include="Microsoft.AspNet.Identity.Owin">
       <Version>2.2.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChurchYelp.Data\ChurchYelp.Data.csproj">
+      <Project>{a19e1534-f8b8-45ad-a4db-92330648872e}</Project>
+      <Name>ChurchYelp.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChurchYelp.Services\ChurchYelp.Services.csproj">
+      <Project>{a048b1bc-abb0-44d2-b148-29dec89f78fd}</Project>
+      <Name>ChurchYelp.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
