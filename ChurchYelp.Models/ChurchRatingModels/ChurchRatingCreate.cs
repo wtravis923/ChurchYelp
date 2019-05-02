@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ChurchYelp.Data;
 
-namespace ChurchYelp.Data
+
+namespace ChurchYelp.Models.ChurchRatingModels
 {
-   public class ChurchRating
+    public class ChurchRatingCreate
     {
-        [Key]
         public int ChurchID { get; set; }
 
         public float CommunityInvolvementRating { get; set; }
@@ -23,6 +23,5 @@ namespace ChurchYelp.Data
         public float MessageRating { get; set; }
 
         public virtual Church Church { get; set; }
-
     }
 }
