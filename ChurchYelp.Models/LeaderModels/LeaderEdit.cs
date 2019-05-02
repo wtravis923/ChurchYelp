@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChurchYelp.Models.LeaderModels
 {
-    class LeaderEdit
+    public class LeaderEdit
     {
         public int LeaderID { get; set; }
 
