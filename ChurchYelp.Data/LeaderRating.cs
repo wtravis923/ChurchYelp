@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace ChurchYelp.Data
 {
-  public class LeaderRating
+    public class LeaderRating
     {
         [Key]
         public int LeaderID { get; set; }
 
-        public int LeaderRatingID  { get; set; }
+        public int LeaderRatingID { get; set; }
 
         public Guid UserID { get; set; }
 
@@ -26,7 +26,5 @@ namespace ChurchYelp.Data
         public float RapportRating { get; set; }
 
         public virtual Leader Leaders{ get; set; }
-    
-        
     }
 }

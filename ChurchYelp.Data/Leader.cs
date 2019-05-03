@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 namespace ChurchYelp.Data
 {
 
- public   class Leader
-
  public class Leader
 
     {
