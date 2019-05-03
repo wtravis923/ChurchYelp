@@ -25,7 +25,6 @@ namespace ChurchYelp.Data
 
         public float RapportRating { get; set; }
 
-        public virtual Leader Leaders { get; set; }
-
+        public virtual Leader Leaders{ get; set; }
     }
 }
