@@ -23,7 +23,7 @@ namespace ChurchYelp.Services
             {
                 LeaderID = model.LeaderID,
                 SpeakingAbilityRating = model.SpeakingAbilityRating,
-                EngaginRating = model.EngagingRating,
+                EngagingRating = model.EngagingRating,
                 AuthenticRating = model.AuthenticRating,
                 RapportRating = model.RapportRating,
                 UserID = model.UserID
@@ -56,7 +56,7 @@ namespace ChurchYelp.Services
                         LeaderRatingID = r.LeaderRatingID,
                         LeaderID = r.LeaderID,
                         SpeakingAbilityRating = r.SpeakingAbilityRating,
-                        EngagingRating = r.EngaginRating,
+                        EngagingRating = r.EngagingRating,
                         AuthenticRating = r.AuthenticRating,
                         RapportRating = r.RapportRating,
                     }).ToArray();
@@ -74,7 +74,7 @@ namespace ChurchYelp.Services
                     LeaderRatingID = entity.LeaderRatingID,
                     LeaderID = entity.LeaderID,
                     SpeakingAbilityRating = entity.SpeakingAbilityRating,
-                    EngagingRating = entity.EngaginRating,
+                    EngagingRating = entity.EngagingRating,
                     AuthenticRating = entity.AuthenticRating,
                     RapportRating = entity.RapportRating
 
@@ -91,7 +91,7 @@ namespace ChurchYelp.Services
                 var entity = ctx.LeaderRatings.Single(r => r.LeaderRatingID == model.LeaderRatingID);
 
                 entity.SpeakingAbilityRating = model.SpeakingAbilityRating;
-                entity.EngaginRating = model.EngagingRating;
+                entity.EngagingRating = model.EngagingRating;
                 entity.AuthenticRating = model.AuthenticRating;
                 entity.RapportRating = model.RapportRating;
 
@@ -154,7 +154,7 @@ namespace ChurchYelp.Services
                 float totalRating = 0;
                 foreach (var rating in query)
                 {
-                    totalRating += rating.EngaginRating;
+                    totalRating += rating.EngagingRating;
                 }
                 totalRating /= query.Count;
 
