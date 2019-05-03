@@ -19,7 +19,7 @@ namespace ChurchYelp.Data
 
         public float SpeakingAbilityRating { get; set; }
 
-        public float EngaginRating { get; set; }
+        public float EngagingRating { get; set; }
 
         public float AuthenticRating { get; set; }
 
