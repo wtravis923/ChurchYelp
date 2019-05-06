@@ -41,7 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChurchRatingService.cs" />
     <Compile Include="ChurchService.cs" />
+
+    <Compile Include="LeaderRatingService.cs" />
+
+    <Compile Include="LeaderService.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,7 +67,7 @@
       <Name>ChurchYelp.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\ChurchYelp.Models\ChurchYelp.Models.csproj">
-      <Project>{0bf6dbd5-c139-4dc7-93f7-94b3c195d620}</Project>
+      <Project>{0BF6DBD5-C139-4DC7-93F7-94B3C195D620}</Project>
       <Name>ChurchYelp.Models</Name>
     </ProjectReference>
   </ItemGroup>

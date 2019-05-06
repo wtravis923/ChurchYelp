@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace ChurchYelp.Data
 {
-   public class ChurchRating
+    public class ChurchRating
     {
         [Key]
         public int ChurchID { get; set; }
+        public Guid UserID { get; set; }
+        public int ChurchRatingID { get; set; }
 
         public float CommunityInvolvementRating { get; set; }
 

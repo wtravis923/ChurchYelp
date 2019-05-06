@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace ChurchYelp.Data
 {
- public   class Leadership
+
+ public class Leader
+
     {
         [Key]
         public int LeaderID { get; set; }
