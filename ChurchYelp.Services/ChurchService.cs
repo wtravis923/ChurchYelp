@@ -52,7 +52,7 @@ namespace ChurchYelp.Services
                 return query.ToArray();
                 }
             }
-       public ChurchDetail GetParkByID(int id)
+       public ChurchDetail GetChurchByID(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {

@@ -206,6 +206,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ChurchController.cs" />
     <Compile Include="Controllers\ChurchRatingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LeaderController.cs" />
@@ -297,6 +298,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="obj\Debug\ChurchYelp.WebApi.csproj.FileListAbsolute.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -319,6 +321,9 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="bin\ChurchYelp.WebApi.dll.config" />
+    <Content Include="obj\Debug\ChurchYelp.WebApi.csproj.CopyComplete" />
+    <Content Include="obj\Debug\ChurchYelp.WebApi.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\ChurchYelp.WebApi.csprojAssemblyReference.cache" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -347,6 +352,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -383,6 +389,7 @@
       <Name>ChurchYelp.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\ChurchYelp.Models\ChurchYelp.Models.csproj">
+      <Project>{0bf6dbd5-c139-4dc7-93f7-94b3c195d620}</Project>
       <Project>{0BF6DBD5-C139-4DC7-93F7-94B3C195D620}</Project>
       <Name>ChurchYelp.Models</Name>
     </ProjectReference>
