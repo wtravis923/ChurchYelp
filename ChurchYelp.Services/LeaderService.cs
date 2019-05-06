@@ -10,6 +10,10 @@ namespace ChurchYelp.Services
 {
     public class LeaderService
     {
+        public LeaderService(Guid userId)
+        {
+        }
+
         public bool CreateLeader(LeaderCreate model)
         {
             Leader leader = new Leader()

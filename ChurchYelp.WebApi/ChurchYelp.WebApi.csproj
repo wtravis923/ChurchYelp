@@ -207,6 +207,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LeaderController.cs" />
+    <Compile Include="Controllers\LeaderRatingController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -310,6 +312,10 @@
     <ProjectReference Include="..\ChurchYelp.Data\ChurchYelp.Data.csproj">
       <Project>{a19e1534-f8b8-45ad-a4db-92330648872e}</Project>
       <Name>ChurchYelp.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChurchYelp.Models\ChurchYelp.Models.csproj">
+      <Project>{0BF6DBD5-C139-4DC7-93F7-94B3C195D620}</Project>
+      <Name>ChurchYelp.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\ChurchYelp.Services\ChurchYelp.Services.csproj">
       <Project>{a048b1bc-abb0-44d2-b148-29dec89f78fd}</Project>
