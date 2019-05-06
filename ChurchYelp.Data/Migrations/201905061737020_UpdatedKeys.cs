@@ -3,7 +3,7 @@ namespace ChurchYelp.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCommit : DbMigration
+    public partial class UpdatedKeys : DbMigration
     {
         public override void Up()
         {
@@ -27,36 +27,34 @@ namespace ChurchYelp.Data.Migrations
                 "dbo.ChurchRating",
                 c => new
                     {
-                        ChurchID = c.Int(nullable: false, identity: true),
+                        ChurchRatingID = c.Int(nullable: false, identity: true),
+                        ChurchID = c.Int(nullable: false),
                         UserID = c.Guid(nullable: false),
-                        ChurchRatingID = c.Int(nullable: false),
                         CommunityInvolvementRating = c.Single(nullable: false),
                         FriendlyRating = c.Single(nullable: false),
                         FacilityRating = c.Single(nullable: false),
                         MusicRating = c.Single(nullable: false),
                         MessageRating = c.Single(nullable: false),
-                        Church_ChurchID = c.Int(),
                     })
-                .PrimaryKey(t => t.ChurchID)
-                .ForeignKey("dbo.Church", t => t.Church_ChurchID)
-                .Index(t => t.Church_ChurchID);
+                .PrimaryKey(t => t.ChurchRatingID)
+                .ForeignKey("dbo.Church", t => t.ChurchID, cascadeDelete: true)
+                .Index(t => t.ChurchID);
             
             CreateTable(
                 "dbo.LeaderRating",
                 c => new
                     {
-                        LeaderID = c.Int(nullable: false, identity: true),
-                        LeaderRatingID = c.Int(nullable: false),
+                        LeaderRatingID = c.Int(nullable: false, identity: true),
+                        LeaderID = c.Int(nullable: false),
                         UserID = c.Guid(nullable: false),
                         SpeakingAbilityRating = c.Single(nullable: false),
                         EngagingRating = c.Single(nullable: false),
                         AuthenticRating = c.Single(nullable: false),
                         RapportRating = c.Single(nullable: false),
-                        Leaders_LeaderID = c.Int(),
                     })
-                .PrimaryKey(t => t.LeaderID)
-                .ForeignKey("dbo.Leader", t => t.Leaders_LeaderID)
-                .Index(t => t.Leaders_LeaderID);
+                .PrimaryKey(t => t.LeaderRatingID)
+                .ForeignKey("dbo.Leader", t => t.LeaderID, cascadeDelete: true)
+                .Index(t => t.LeaderID);
             
             CreateTable(
                 "dbo.Leader",
@@ -150,14 +148,14 @@ namespace ChurchYelp.Data.Migrations
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
-            DropForeignKey("dbo.LeaderRating", "Leaders_LeaderID", "dbo.Leader");
-            DropForeignKey("dbo.ChurchRating", "Church_ChurchID", "dbo.Church");
+            DropForeignKey("dbo.LeaderRating", "LeaderID", "dbo.Leader");
+            DropForeignKey("dbo.ChurchRating", "ChurchID", "dbo.Church");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
-            DropIndex("dbo.LeaderRating", new[] { "Leaders_LeaderID" });
-            DropIndex("dbo.ChurchRating", new[] { "Church_ChurchID" });
+            DropIndex("dbo.LeaderRating", new[] { "LeaderID" });
+            DropIndex("dbo.ChurchRating", new[] { "ChurchID" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");

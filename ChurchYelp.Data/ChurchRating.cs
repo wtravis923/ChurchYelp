@@ -9,9 +9,11 @@ namespace ChurchYelp.Data
 {
     public class ChurchRating
     {
-        [Key]
+        
         public int ChurchID { get; set; }
         public Guid UserID { get; set; }
+
+        [Key]
         public int ChurchRatingID { get; set; }
 
         public float CommunityInvolvementRating { get; set; }

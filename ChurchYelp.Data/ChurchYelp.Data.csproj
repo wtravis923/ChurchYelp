@@ -46,9 +46,9 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Leader.cs" />
     <Compile Include="LeaderRating.cs" />
-    <Compile Include="Migrations\201905061400069_InitialCommit.cs" />
-    <Compile Include="Migrations\201905061400069_InitialCommit.Designer.cs">
-      <DependentUpon>201905061400069_InitialCommit.cs</DependentUpon>
+    <Compile Include="Migrations\201905061737020_UpdatedKeys.cs" />
+    <Compile Include="Migrations\201905061737020_UpdatedKeys.Designer.cs">
+      <DependentUpon>201905061737020_UpdatedKeys.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,8 +65,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905061400069_InitialCommit.resx">
-      <DependentUpon>201905061400069_InitialCommit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905061737020_UpdatedKeys.resx">
+      <DependentUpon>201905061737020_UpdatedKeys.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
