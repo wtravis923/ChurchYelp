@@ -16,7 +16,6 @@ namespace ChurchYelp.Data
 
         public Guid UserID { get; set; }
 
-
         public float SpeakingAbilityRating { get; set; }
 
         public float EngagingRating { get; set; }
