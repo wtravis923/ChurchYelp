@@ -9,10 +9,15 @@ namespace ChurchYelp.Models.ChurchRatingModels
 {
     public class ChurchRatingListItem
     {
+        public int ChurchRatingID { get; set; }
+
         public int ChurchID { get; set; }
 
+        public string ChurchName { get; set; }
+        public string ChurchCity { get; set; }
+        public string ChurchState { get; set; }
+
         public float CommunityInvolvementRating { get; set; }
-        public int ChurchRatingID { get; set; }
 
         public float FriendlyRating { get; set; }
 
@@ -21,7 +26,5 @@ namespace ChurchYelp.Models.ChurchRatingModels
         public float MusicRating { get; set; }
 
         public float MessageRating { get; set; }
-
-        public virtual Church Church { get; set; }
     }
 }

@@ -15,12 +15,8 @@ namespace ChurchYelp.Services
             Church church = new Church()
             {
                 ChurchName = model.ChurchName,
-                ChurchLocation = model.ChurchLocation,
-                CommunityInvolvement = model.CommunityInvolvement,
-                Friendliness = model.Friendliness,
-                Facilities = model.Facilities,
-                Music = model.Music,
-                Message = model.Message
+                ChurchCity = model.ChurchCity,
+                ChurchState = model.ChurchState
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -40,18 +36,18 @@ namespace ChurchYelp.Services
                     {
                         ChurchID = p.ChurchID,
                         ChurchName = p.ChurchName,
-                        ChurchLocation = p.ChurchLocation,
-                        CommunityInvolvement = p.CommunityInvolvement,
-                        Friendliness = p.Friendliness,
-                        Facilities = p.Facilities,
-                        Music = p.Music,
-                        Message = p.Message
-
-
+                        ChurchCity = p.ChurchCity,
+                        ChurchState = p.ChurchState,
+                        CommunityInvolvementRating = p.CommunityInvolvementRating,
+                        FriendlyRating = p.FriendlyRating,
+                        FacilityRating = p.FacilityRating,
+                        MusicRating = p.MusicRating,
+                        MessageRating = p.MessageRating
                     });
                 return query.ToArray();
                 }
             }
+
        public ChurchDetail GetChurchByID(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -62,12 +58,13 @@ namespace ChurchYelp.Services
                 {
                     ChurchID = entity.ChurchID,
                     ChurchName = entity.ChurchName,
-                    ChurchLocation = entity.ChurchLocation,
-                    CommunityInvolvement = entity.CommunityInvolvement,
-                    Friendliness = entity.Friendliness,
-                    Facilities = entity.Facilities,
-                    Music = entity.Music,
-                    Message = entity.Message
+                    ChurchCity = entity.ChurchCity,
+                    ChurchState = entity.ChurchState,
+                    CommunityInvolvementRating = entity.CommunityInvolvementRating,
+                    FriendlyRating = entity.FriendlyRating,
+                    FacilityRating = entity.FacilityRating,
+                    MusicRating = entity.MusicRating,
+                    MessageRating = entity.MessageRating
                 };
                 return model;
             }
@@ -79,15 +76,13 @@ namespace ChurchYelp.Services
                 var entity = ctx.Churches.FirstOrDefault(p => p.ChurchID == model.ChurchID);
 
                 entity.ChurchName = model.ChurchName;
-                entity.ChurchLocation = model.ChurchLocation;
-                entity.CommunityInvolvement = model.CommunityInvolvement;
-                entity.Friendliness = model.Friendliness;
-                entity.Music = model.Music;
-                entity.Message = model.Message;
+                entity.ChurchCity = model.ChurchCity;
+                entity.ChurchState = model.ChurchState;
 
                 return ctx.SaveChanges() == 1;
             }
         }
+
         public bool DeleteChurch(int id)
         {
             using(var ctx = new ApplicationDbContext())
