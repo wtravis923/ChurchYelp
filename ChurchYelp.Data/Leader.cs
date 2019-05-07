@@ -18,12 +18,12 @@ namespace ChurchYelp.Data
 
         public Guid UserID { get; set; }
 
-        public float SpeakingAbility { get; set; }
+        public float SpeakingAbilityRating { get; set; }
 
-        public float Engaging { get; set; }
+        public float EngagingRating { get; set; }
 
-        public float Authentic { get; set; }
+        public float AuthenticRating { get; set; }
 
-        public float Rapport { get; set; }
+        public float RapportRating { get; set; }
     }
 }
