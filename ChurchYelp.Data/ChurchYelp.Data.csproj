@@ -46,7 +46,7 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Leader.cs" />
     <Compile Include="LeaderRating.cs" />
-<!--<<<<<<< HEAD
+    <!--<<<<<<< HEAD
     <Compile Include="Migrations\201905061735348_update.cs" />
     <Compile Include="Migrations\201905061735348_update.Designer.cs">
       <DependentUpon>201905061735348_update.cs</DependentUpon>
@@ -54,7 +54,11 @@
     <Compile Include="Migrations\201905061737020_UpdatedKeys.cs" />
     <Compile Include="Migrations\201905061737020_UpdatedKeys.Designer.cs">
       <DependentUpon>201905061737020_UpdatedKeys.cs</DependentUpon>
-<!-->>>>>>> f5f46270c45ff2f623150c589acc39c9a4fe37a1-->
+      <!-->>>>>>> f5f46270c45ff2f623150c589acc39c9a4fe37a1-->
+    </Compile>
+    <Compile Include="Migrations\201905071542520_Updated Tables.cs" />
+    <Compile Include="Migrations\201905071542520_Updated Tables.Designer.cs">
+      <DependentUpon>201905071542520_Updated Tables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,13 +75,16 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-<!--<<<<<<< HEAD
+    <!--<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201905061735348_update.resx">
       <DependentUpon>201905061735348_update.cs</DependentUpon>
 =======-->
     <EmbeddedResource Include="Migrations\201905061737020_UpdatedKeys.resx">
       <DependentUpon>201905061737020_UpdatedKeys.cs</DependentUpon>
-<!-->>>>>>> f5f46270c45ff2f623150c589acc39c9a4fe37a1-->
+      <!-->>>>>>> f5f46270c45ff2f623150c589acc39c9a4fe37a1-->
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905071542520_Updated Tables.resx">
+      <DependentUpon>201905071542520_Updated Tables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
