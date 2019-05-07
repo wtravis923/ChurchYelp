@@ -46,6 +46,7 @@ namespace ChurchYelp.Services
                     });
                 return query.ToArray();
             }
+        }
 
        public ChurchDetail GetChurchByID(int id)
         {
