@@ -43,11 +43,8 @@
   <ItemGroup>
     <Compile Include="ChurchRatingService.cs" />
     <Compile Include="ChurchService.cs" />
-
     <Compile Include="LeaderRatingService.cs" />
-
     <Compile Include="LeaderService.cs" />
-
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChurchYelp.Services
 {
-  public class ChurchService
+    public class ChurchService
     {
         public bool CreateChurch(ChurchCreate model)
         {
@@ -25,10 +25,10 @@ namespace ChurchYelp.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-            public IEnumerable<ChurchListItem> GetChurch()
+        public IEnumerable<ChurchListItem> GetChurch()
+        {
+            using (var ctx = new ApplicationDbContext())
             {
-                using (var ctx = new ApplicationDbContext())
-                {
                 var query =
                     ctx
                     .Churches
@@ -45,7 +45,6 @@ namespace ChurchYelp.Services
                         MessageRating = p.MessageRating
                     });
                 return query.ToArray();
-                }
             }
 
        public ChurchDetail GetChurchByID(int id)
@@ -85,7 +84,7 @@ namespace ChurchYelp.Services
 
         public bool DeleteChurch(int id)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.Churches.Single(p => p.ChurchID == id);
 
@@ -93,6 +92,6 @@ namespace ChurchYelp.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        }
     }
+}
 
