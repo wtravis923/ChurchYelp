@@ -14,10 +14,10 @@ namespace ChurchYelp.Data
         [Key]
         public int LeaderID { get; set; }
 
+        [Required]
         public string LeaderName { get; set; }
 
-        public Guid UserID { get; set; }
-
+        //Foreign Keys brought in from LeaderRating
         public float SpeakingAbilityRating { get; set; }
 
         public float EngagingRating { get; set; }
