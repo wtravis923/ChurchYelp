@@ -13,25 +13,25 @@ namespace ChurchYelp.WebApi.Controllers
     [Authorize]
     public class LeaderController : ApiController
     {
-        public IHttpActionResult GetAll()
-        {
-            LeaderService leaderService = CreateLeaderService();
-            var leaders = leaderService.GetLeaders();
-            return Ok(leaders);
-        }
-
         public IHttpActionResult Get()
         {
-            LeaderService leaderService = CreateLeaderService();
-            var leaders = leaderService.GetLeaders();
-            return Ok(leaders);
+            var service = new LeaderService();
+            var leader = service.GetLeaders();
+            return Ok(leader);
+        }
+        public IHttpActionResult GetLeaderByID(int id)
+        {
+            var service = new LeaderService();
+            var leader = service.GetLeaderByID(id);
+            return Ok(leader);
         }
 
         public IHttpActionResult Post(LeaderCreate leader)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            var service = CreateLeaderService();
+
+            var service = new LeaderService();
 
             if (!service.CreateLeader(leader))
                 return InternalServerError();
@@ -41,25 +41,33 @@ namespace ChurchYelp.WebApi.Controllers
 
         public IHttpActionResult Put(LeaderEdit leader)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = new LeaderService();
+
+            if (!service.EditLeader(leader))
+                return InternalServerError();
+
             return Ok();
+
         }
 
         public IHttpActionResult Delete(int id)
         {
-            var service = CreateLeaderService();
+            var service = new LeaderService();
             if (!service.DeleteLeader(id))
                 return InternalServerError();
 
             return Ok();
         }
 
-        //Added a blank constructor in Leader Service to run.
-        private LeaderService CreateLeaderService()
-        {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var leaderService = new LeaderService(userId);
-            return leaderService;
-        }
+        //private LeaderService CreateLeaderService()
+        //{
+        //    var userId = Guid.Parse(User.Identity.GetUserId());
+        //    var leaderService = new LeaderService(userId);
+        //    return leaderService;
+        //}
         
     }
 }

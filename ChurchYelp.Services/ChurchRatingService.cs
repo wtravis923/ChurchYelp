@@ -11,24 +11,26 @@ namespace ChurchYelp.Services
     public class ChurchRatingService
     {
         private readonly Guid _userId;
+
         public ChurchRatingService(Guid userId)
         {
             _userId = userId;
         }
+
         public bool CreateRating(ChurchRatingCreate model)
         {
             var rating = new ChurchRating
             {
                 ChurchID = model.ChurchID,
-                UserID = model.UserID,
-                ChurchRatingID = model.ChurchRatingID,
-            CommunityInvolvementRating = model.CommunityInvolvementRating,
-            FriendlyRating = model.FriendlyRating,
-            FacilityRating = model.FacilityRating,
-            MusicRating = model.MusicRating,
-            MessageRating = model.MessageRating
+                CommunityInvolvementRating = model.CommunityInvolvementRating,
+                FriendlyRating = model.FriendlyRating,
+                FacilityRating = model.FacilityRating,
+                MusicRating = model.MusicRating,
+                MessageRating = model.MessageRating,
+                UserID = _userId
 
             };
+
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.ChurchRatings.Add(rating);
@@ -44,6 +46,7 @@ namespace ChurchYelp.Services
                 return false;
             }
         }
+
         public IEnumerable<ChurchRatingListItem>
             GetRatingsByChurchID(int churchId)
         {
@@ -67,6 +70,7 @@ namespace ChurchYelp.Services
                 return query;
             }
         }
+
         public ChurchRatingDetail GetRatingByID(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -77,6 +81,7 @@ namespace ChurchYelp.Services
                 {
                     ChurchRatingID = entity.ChurchRatingID,
                     ChurchID = entity.ChurchID,
+                    ChurchName = entity.Church.ChurchName,
                     CommunityInvolvementRating = entity.CommunityInvolvementRating,
                     FriendlyRating = entity.FriendlyRating,
                     FacilityRating = entity.FacilityRating,
@@ -98,6 +103,7 @@ namespace ChurchYelp.Services
                 entity.FacilityRating = model.FacilityRating;
                 entity.MusicRating = model.MusicRating;
                 entity.MessageRating = model.MusicRating;
+                entity.ChurchID = model.ChurchID;
 
                 if (ctx.SaveChanges() == 1)
                 {
@@ -111,6 +117,7 @@ namespace ChurchYelp.Services
                 return false;
             }
         }
+
         public bool DeleteChurhcRating(int ratingId)
         {
             using (var ctx = new ApplicationDbContext())
@@ -145,7 +152,7 @@ namespace ChurchYelp.Services
                 totalCommunity /= query.Count;
 
                 var church = ctx.Churches.Single(p => p.ChurchID == churchId);
-                church.CommunityInvolvement = totalCommunity;
+                church.CommunityInvolvementRating = totalCommunity;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -164,7 +171,7 @@ namespace ChurchYelp.Services
                 totalFriendly /= query.Count;
 
                 var church = ctx.Churches.Single(p => p.ChurchID == churchId);
-                church.Friendliness = totalFriendly;
+                church.FriendlyRating = totalFriendly;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -183,7 +190,7 @@ namespace ChurchYelp.Services
                 totalMessage /= query.Count;
 
                 var church = ctx.Churches.Single(p => p.ChurchID == churchId);
-                church.Message = totalMessage;
+                church.MessageRating = totalMessage;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -202,7 +209,7 @@ namespace ChurchYelp.Services
                 totalMusic /= query.Count;
 
                 var church = ctx.Churches.Single(p => p.ChurchID == churchId);
-                church.Music = totalMusic;
+                church.MusicRating = totalMusic;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -221,7 +228,7 @@ namespace ChurchYelp.Services
                 totalFacility /= query.Count;
 
                 var church = ctx.Churches.Single(p => p.ChurchID == churchId);
-                church.Facilities = totalFacility;
+                church.FacilityRating = totalFacility;
 
                 return ctx.SaveChanges() == 1;
             }
