@@ -140,7 +140,7 @@ namespace ChurchYelp.Services
                 totalRating /= query.Count;
 
                 var leader = ctx.Leaders.Single(p => p.LeaderID == leaderId);
-                leader.SpeakingAbility = totalRating;
+                leader.SpeakingAbilityRating = totalRating;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -159,7 +159,7 @@ namespace ChurchYelp.Services
                 totalRating /= query.Count;
 
                 var leader = ctx.Leaders.Single(p => p.LeaderID == leaderId);
-                leader.Engaging = totalRating;
+                leader.EngagingRating = totalRating;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -179,7 +179,7 @@ namespace ChurchYelp.Services
                 totalRating /= query.Count;
 
                 var leader = ctx.Leaders.Single(p => p.LeaderID == leaderId);
-                leader.Authentic = totalRating;
+                leader.AuthenticRating = totalRating;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -198,7 +198,7 @@ namespace ChurchYelp.Services
                 totalRating /= query.Count;
 
                 var leader = ctx.Leaders.Single(p => p.LeaderID == leaderId);
-                leader.Rapport = totalRating;
+                leader.RapportRating = totalRating;
 
                 return ctx.SaveChanges() == 1;
             }
