@@ -10,15 +10,12 @@ namespace ChurchYelp.Services
 {
     public class LeaderService
     {
+
         public bool CreateLeader(LeaderCreate model)
         {
             Leader leader = new Leader()
             {
                 LeaderName = model.LeaderName,
-                SpeakingAbility = model.SpeakingAbility,
-                Engaging = model.Engaging,
-                Authentic = model.Authentic,
-                Rapport = model.Rapport
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -39,10 +36,10 @@ namespace ChurchYelp.Services
                     {
                         LeaderID = p.LeaderID,
                         LeaderName = p.LeaderName,
-                        SpeakingAbility = p.SpeakingAbility,
-                        Engaging = p.Engaging,
-                        Authentic = p.Authentic,
-                        Rapport = p.Rapport
+                        SpeakingAbilityRating = p.SpeakingAbilityRating,
+                        EngagingRating = p.EngagingRating,
+                        AuthenticRating = p.AuthenticRating,
+                        RapportRating = p.RapportRating
                     });
 
                 return query.ToArray();
@@ -59,10 +56,10 @@ namespace ChurchYelp.Services
                 {
                     LeaderID = entity.LeaderID,
                     LeaderName = entity.LeaderName,
-                    SpeakingAbility = entity.SpeakingAbility,
-                    Engaging = entity.Engaging,
-                    Authentic = entity.Authentic,
-                    Rapport = entity.Rapport
+                    SpeakingAbilityRating = entity.SpeakingAbilityRating,
+                    EngagingRating = entity.EngagingRating,
+                    AuthenticRating = entity.AuthenticRating,
+                    RapportRating = entity.RapportRating
                 };
 
                 return model;
@@ -76,10 +73,6 @@ namespace ChurchYelp.Services
                 var entity = ctx.Leaders.FirstOrDefault(p => p.LeaderID == model.LeaderID);
 
                 entity.LeaderName = model.LeaderName;
-                entity.SpeakingAbility = model.SpeakingAbility;
-                entity.Engaging = model.Engaging;
-                entity.Authentic = model.Authentic;
-                entity.Rapport = model.Rapport;
 
                 return ctx.SaveChanges() == 1;
             }

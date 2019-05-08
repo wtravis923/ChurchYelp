@@ -9,20 +9,30 @@ namespace ChurchYelp.Data
 {
     public class ChurchRating
     {
-        [Key]
-        public int ChurchID { get; set; }
+
+        [Required]
         public Guid UserID { get; set; }
+
+        [Key]
         public int ChurchRatingID { get; set; }
 
+        [Required]
         public float CommunityInvolvementRating { get; set; }
 
+        [Required]
         public float FriendlyRating { get; set; }
 
+        [Required]
         public float FacilityRating { get; set; }
 
+        [Required]
         public float MusicRating { get; set; }
 
+        [Required]
         public float MessageRating { get; set; }
+
+        [Required]
+        public int ChurchID { get; set; }
 
         public virtual Church Church { get; set; }
 

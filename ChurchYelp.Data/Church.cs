@@ -12,21 +12,26 @@ namespace ChurchYelp.Data
         [Key]
         public int ChurchID { get; set; }
 
-        public Guid UserID { get; set; }
-
+        [Required]
         public string ChurchName { get; set; }
 
-        public string ChurchLocation { get; set; }
+        [Required]
+        public string ChurchCity { get; set; }
 
-        public float CommunityInvolvement { get; set; }
+        [Required]
+        public string ChurchState { get; set; }
 
-        public float Friendliness { get; set; }
 
-        public float Facilities { get; set; }
+        //Foreign Keys from Church Rating
+        public float CommunityInvolvementRating { get; set; }
 
-        public float Music { get; set; }
+        public float FriendlyRating { get; set; }
 
-        public float Message { get; set; }
+        public float FacilityRating { get; set; }
+
+        public float MusicRating { get; set; }
+
+        public float MessageRating { get; set; }
 
     }
 }
