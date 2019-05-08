@@ -12,8 +12,6 @@ namespace ChurchYelp.Models.LeaderModels
 
         public string LeaderName { get; set; }
 
-        public Guid UserID { get; set; }
-
         public float SpeakingAbilityRating { get; set; }
 
         public float EngagingRating { get; set; }
