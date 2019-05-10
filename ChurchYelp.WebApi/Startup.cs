@@ -12,6 +12,7 @@ namespace ChurchYelp.WebApi
     {
         public void Configuration(IAppBuilder app)
         {
+            app.UserCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             ConfigureAuth(app);
         }
     }
