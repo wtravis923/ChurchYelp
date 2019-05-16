@@ -10,9 +10,6 @@ namespace ChurchYelp.Models.LeaderModels
     public class LeaderCreate
     {
         [Required]
-        public int LeaderID { get; set; }
-
-        [Required]
         public string LeaderName { get; set; }
     }
 }
