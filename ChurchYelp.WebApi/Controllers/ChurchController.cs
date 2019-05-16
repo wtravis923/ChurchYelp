@@ -41,6 +41,14 @@ namespace ChurchYelp.WebApi.Controllers
         }
         public IHttpActionResult Put(ChurchEdit church)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = new ChurchService();
+
+            if (!service.EditChurch(church))
+                return InternalServerError();
+
             return Ok();
         }
         public IHttpActionResult Delete(int id)
