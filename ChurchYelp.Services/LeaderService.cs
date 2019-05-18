@@ -16,10 +16,6 @@ namespace ChurchYelp.Services
             Leader leader = new Leader()
             {
                 LeaderName = model.LeaderName,
-                SpeakingAbilityRating = model.SpeakingAbilityRating,
-                EngagingRating = model.EngagingRating,
-                AuthenticRating = model.AuthenticRating,
-                RapportRating = model.RapportRating
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -77,10 +73,6 @@ namespace ChurchYelp.Services
                 var entity = ctx.Leaders.FirstOrDefault(p => p.LeaderID == model.LeaderID);
 
                 entity.LeaderName = model.LeaderName;
-                entity.SpeakingAbilityRating = model.SpeakingAbilityRating;
-                entity.EngagingRating = model.EngagingRating;
-                entity.AuthenticRating = model.AuthenticRating;
-                entity.RapportRating = model.RapportRating;
 
                 return ctx.SaveChanges() == 1;
             }

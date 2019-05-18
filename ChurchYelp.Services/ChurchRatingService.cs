@@ -28,7 +28,6 @@ namespace ChurchYelp.Services
                 MusicRating = model.MusicRating,
                 MessageRating = model.MessageRating,
                 UserID = _userId
-
             };
 
             using (var ctx = new ApplicationDbContext())

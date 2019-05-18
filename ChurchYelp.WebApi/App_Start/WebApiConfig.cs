@@ -17,6 +17,10 @@ namespace ChurchYelp.WebApi
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e710a9896adff8a0d99dda241adee66245b6bee2
             config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();
