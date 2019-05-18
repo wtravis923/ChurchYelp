@@ -14,6 +14,43 @@ namespace ChurchYelp.WebApi
         {
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             ConfigureAuth(app);
+
+            ConfigureAuth(app);
+            createRolesandUsers();
+        }
+        //create default User roles and Admin User for login
+        private void createRolesandUsers()
+        {
+            ApplicationDbContext context = new ApplicationDbContext();
+
+            var roleManager = new RoleManager<IdentityRole>(new RolseStore<IdentityRole>(context));
+            var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
+            //first Admin Role and default admin user
+            if (!roleManager.RoleExists("Admin"))
+            {
+                //create admin rule 
+                var role = new Microsot.AspNet.Identity.EntityFramework.IdentityRole();
+                role.Name = "Admin";
+                roleManager.Create(role);
+
+                //create an Admin Super user who will maintain the website
+                var user = new ApplicationUser();
+                user.UserName = "Sarah";
+                user.Email = "sarah.spriggs01@gmail.com";
+
+                string userPWD = "Password123!";
+
+                var chkUser = UserManager.Create(user, userPWD);
+
+                //add default User to Role Admin
+                if (chkUser.Succeeded)
+                {
+                    var result1 = UserManager.AddToRole(user.Id, "Admin");
+                }
+            }
+
+        
         }
     }
 }

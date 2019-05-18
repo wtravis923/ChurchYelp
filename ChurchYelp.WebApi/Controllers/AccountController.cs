@@ -385,7 +385,7 @@ namespace ChurchYelp.WebApi.Controllers
             base.Dispose(disposing);
         }
 
-        #region Helpers
+       #region Helpers
 
         private IAuthenticationManager Authentication
         {
