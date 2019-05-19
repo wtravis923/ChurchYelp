@@ -20,7 +20,7 @@ using ChurchYelp.Data;
 
 namespace ChurchYelp.WebApi.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
