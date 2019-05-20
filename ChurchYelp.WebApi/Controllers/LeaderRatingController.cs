@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity;
 
 namespace ChurchYelp.WebApi.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class LeaderRatingController : ApiController
     {
         public IHttpActionResult GetByLeaderId(int id)

@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace ChurchYelp.WebApi.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     public class LeaderController : ApiController
     {
         public IHttpActionResult Get()
