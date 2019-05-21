@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace ChurchYelp.WebApi.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public class ChurchController : ApiController
     {
         public IHttpActionResult Get()
@@ -51,6 +51,7 @@ namespace ChurchYelp.WebApi.Controllers
 
             return Ok();
         }
+
         public IHttpActionResult Delete(int id)
         {
             var service = new ChurchService();

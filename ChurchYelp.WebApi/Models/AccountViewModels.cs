@@ -29,6 +29,8 @@ namespace ChurchYelp.WebApi.Models
     {
         public string Email { get; set; }
 
+        public string Role { get; set; }
+
         public bool HasRegistered { get; set; }
 
         public string LoginProvider { get; set; }
